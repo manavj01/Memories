@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist/index.js",
+    "restart": "rimraf dist && npm run start",
+    "dev": "nodemon --exec npm run restart"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +19,10 @@
     "express": "^4.17.1",
     "mongoose": "^6.0.7",
     "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
   }
 }

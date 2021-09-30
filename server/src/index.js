@@ -1,9 +1,8 @@
 import express from 'express';
-import bodyParser from 'body-parser';
-import  mongoose  from 'mongoose';
+import mongoose  from 'mongoose';
 import cors from 'cors';
 
-const app= express();
+const app = express();
 
 const CONNECTION_URL = "mongodb+srv://manavj0120:manavj0120@cluster0.uugto.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5000;
